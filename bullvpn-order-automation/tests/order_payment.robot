@@ -1,6 +1,5 @@
 *** Settings ***
 Resource          ../resources/pages/OrderPage.resource.robot
-Resource          ../resources/pages/PaymentPage.resource.robot
 Test Teardown     Close All Browsers
 
 *** Test Cases ***

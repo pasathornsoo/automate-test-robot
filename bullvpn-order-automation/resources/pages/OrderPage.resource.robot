@@ -8,11 +8,18 @@ ${SUMMARY_TOTAL_LOCATOR}     css=span.summary-total
 ${SUMMARY_DISCOUNT_LOCATOR}  css=span.summary-discount
 ${SUMMARY_AMOUNT_LOCATOR}    css=span.summary-amount
 
+${CREDIT_CARD_METHOD_LOCATOR}    css=div.method-list.d-flex.h-100
+
 *** Keywords ***
 Select Best Seller 1 Year Package
     Wait For Elements State    ${BEST_SELLER_1Y_LOCATOR}    visible    timeout=15s
     Scroll To Element          ${BEST_SELLER_1Y_LOCATOR}
     Click                      ${BEST_SELLER_1Y_LOCATOR}
+
+Select Credit Card Payment Method
+    Wait For Elements State    ${CREDIT_CARD_METHOD_LOCATOR}    visible    timeout=15s
+    Scroll To Element          ${CREDIT_CARD_METHOD_LOCATOR}
+    Click                      ${CREDIT_CARD_METHOD_LOCATOR}
 
 Verify Order Summary Matches Package
     [Arguments]    ${expected_plan}    ${expected_total}    ${expected_discount}    ${expected_amount}
