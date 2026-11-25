@@ -1,0 +1,301 @@
+{
+  "info": {
+    "_postman_id": "1ffd05d4-0d8a-465c-8887-e41cb932a902",
+    "name": "My Collection",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60414472",
+    "_collection_link": "https://go.postman.co/collection/60414472-1ffd05d4-0d8a-465c-8887-e41cb932a902?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get /posts",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{endpoint}}/posts",
+          "host": [
+            "{{endpoint}}"
+          ],
+          "path": [
+            "posts"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Get /posts By Id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200 OK\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response matches expected post data\", function () {\n    const res = pm.response.json();\n\n    pm.expect(res.userId).to.not.be.null;\n    pm.expect(res.userId).to.eql(1);\n    pm.expect(res.title).to.be.a(\"string\").and.not.empty;\n    pm.expect(res.body).to.be.a(\"string\").and.not.empty;\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{endpoint}}/posts/{{id}}",
+          "host": [
+            "{{endpoint}}"
+          ],
+          "path": [
+            "posts",
+            "{{id}}"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Get /posts: comments By Id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200 OK and response is a non-empty array\", function () {\n    pm.response.to.have.status(200);\n\n    const res = pm.response.json();\n    pm.expect(res).to.be.an(\"array\").that.is.not.empty;\n});\n\npm.test(\"All items have valid postId, unique id, and required fields\", function () {\n    const res = pm.response.json();\n    const seenIds = new Set();\n\n    res.forEach((item, index) => {\n        pm.expect(item.postId, `item[${index}].postId`).to.eql(1);\n\n        pm.expect(item.id, `item[${index}].id`).to.exist;\n        pm.expect(item.id, `item[${index}].id`).to.not.be.null;\n        pm.expect(seenIds.has(item.id), `duplicate id: ${item.id}`).to.be.false;\n        seenIds.add(item.id);\n\n        pm.expect(item.name, `item[${index}].name`).to.be.a(\"string\").and.not.empty;\n        pm.expect(item.email, `item[${index}].email`).to.be.a(\"string\").and.include(\"@\");\n        pm.expect(item.body, `item[${index}].body`).to.be.a(\"string\").and.not.empty;\n    });\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{endpoint}}/posts/{{id}}/comments",
+          "host": [
+            "{{endpoint}}"
+          ],
+          "path": [
+            "posts",
+            "{{id}}",
+            "comments"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Get /comments by Post Id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const res = pm.response.json();\n\n// 1. เช็ก Status, Response Time และโครงสร้าง Array\npm.test(\"Status is 200 OK, fast response, and valid array\", function () {\n    pm.response.to.have.status(200);\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\n\n// 2. เช็กข้อมูลภายในทุก Object\npm.test(\"Validate all comment items\", function () {\n    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n    const ids = res.map(item => item.id);\n\n    // เช็กว่า id ไม่ซ้ำกันเลยใน array\n    pm.expect(new Set(ids).size, \"Duplicate IDs found\").to.eql(res.length);\n\n    res.forEach((item, idx) => {\n        pm.expect(item.postId, `item[${idx}].postId`).to.eql(1);\n        pm.expect(item.id, `item[${idx}].id`).to.be.a(\"number\").and.above(0);\n        pm.expect(item.name, `item[${idx}].name`).to.be.a(\"string\").and.not.empty;\n        pm.expect(item.email, `item[${idx}].email`).to.be.a(\"string\").and.match(emailRegex);\n        pm.expect(item.body, `item[${idx}].body`).to.be.a(\"string\").and.not.empty;\n    });\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{endpoint}}/comments?postId={{postId}}",
+          "host": [
+            "{{endpoint}}"
+          ],
+          "path": [
+            "comments"
+          ],
+          "query": [
+            {
+              "key": "postId",
+              "value": "{{postId}}"
+            }
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "POST /posts : Create",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const res = pm.response.json();\nconst reqBody = JSON.parse(pm.request.body.raw);\n\n// 1. เช็ก Status Code\npm.test(\"Status is 201 Created and new ID is generated\", function () {\n    pm.response.to.have.status(201);\n});\n\n// 2. เช็กว่าข้อมูลที่อัปเดตตรงกับที่ส่งไปใน Request Body\npm.test(\"Updated fields match request payload\", function () {\n    pm.expect(res).to.have.all.keys(\"title\", \"body\", \"userId\", \"id\");\n\n    pm.expect(res.id).to.eql(reqBody.id);\n    pm.expect(res.title).to.eql(reqBody.title);\n    pm.expect(res.body).to.eql(reqBody.body);\n    pm.expect(res.userId).to.eql(reqBody.userId);\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"P. Test\",\n  \"body\": \"Test Wed 25 Nov 2026\",\n  \"userId\": 2,\n  \"id\": 101\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{endpoint}}/posts",
+          "host": [
+            "{{endpoint}}"
+          ],
+          "path": [
+            "posts"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "PUT /posts : Update Full Field",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const res = pm.response.json();\nconst reqBody = JSON.parse(pm.request.body.raw);\n\n// 1. เช็ก Status Code และ id\npm.test(\"Status is 200 OK and id is present\", function () {\n    pm.response.to.have.status(200);\n    pm.expect(res.id).to.eql(1);\n});\n\n// 2. เช็กว่าข้อมูลที่อัปเดตตรงกับที่ส่งไปใน Request Body\npm.test(\"Updated fields match request payload\", function () {\n    pm.expect(res).to.have.all.keys(\"title\", \"body\", \"userId\", \"id\");\n\n    pm.expect(res.title).to.eql(reqBody.title);\n    pm.expect(res.body).to.eql(reqBody.body);\n    pm.expect(res.userId).to.eql(reqBody.userId);\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"P. Test\",\n  \"body\": \"Test Wed 25 Nov 2026\",\n  \"userId\": 2\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{endpoint}}/posts/{{id}}",
+          "host": [
+            "{{endpoint}}"
+          ],
+          "path": [
+            "posts",
+            "{{id}}"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "PATCH /posts : Update Some Field",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const res = pm.response.json();\nconst reqBody = JSON.parse(pm.request.body.raw);\n\n// 1. เช็ก Status Code และ id\npm.test(\"Status is 200 OK and id is present\", function () {\n    pm.response.to.have.status(200);\n    pm.expect(res.id).to.eql(1);\n});\n\n// 2. เช็กว่าข้อมูลที่อัปเดตตรงกับที่ส่งไปใน Request Body\npm.test(\"Updated fields match request payload\", function () {\n    pm.expect(res).to.have.all.keys(\"title\", \"body\", \"userId\", \"id\");\n\n    pm.expect(res.title).to.eql(reqBody.title);\n    pm.expect(res.body).to.eql(reqBody.body);\n    pm.expect(res.userId).to.eql(reqBody.userId);\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"P. Test\",\n  \"body\": \"Test Wed 25 Nov 2026\",\n  \"userId\": 2\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{endpoint}}/posts/{{id}}",
+          "host": [
+            "{{endpoint}}"
+          ],
+          "path": [
+            "posts",
+            "{{id}}"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Delete /posts : Delete By Id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const res = pm.response.json();\nconst reqBody = JSON.parse(pm.request.body.raw);\n\n// 1. เช็ก Status Code และ id\npm.test(\"Status is 200 OK and id is present\", function () {\n    pm.response.to.have.status(200);\n    pm.expect(res.id).to.eql(1);\n});\n\n// 2. เช็กว่าข้อมูลที่อัปเดตตรงกับที่ส่งไปใน Request Body\npm.test(\"Updated fields match request payload\", function () {\n    pm.expect(res).to.have.all.keys(\"title\", \"body\", \"userId\", \"id\");\n\n    pm.expect(res.title).to.eql(reqBody.title);\n    pm.expect(res.body).to.eql(reqBody.body);\n    pm.expect(res.userId).to.eql(reqBody.userId);\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"P. Test\",\n  \"body\": \"Test Wed 25 Nov 2026\",\n  \"userId\": 2\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{endpoint}}/posts/{{id}}",
+          "host": [
+            "{{endpoint}}"
+          ],
+          "path": [
+            "posts",
+            "{{id}}"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    }
+  ]
+}
