@@ -1,0 +1,80 @@
+{"level":30,"time":"2026-11-25T10:11:16.428Z","pid":6672,"hostname":"Shumus-Mac-mini.local","msg":"Listening on 127.0.0.1:56397"}
+{"level":30,"time":"2026-11-25T10:11:17.533Z","pid":6672,"hostname":"Shumus-Mac-mini.local","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-11-25T10:11:17.546Z","pid":6672,"hostname":"Shumus-Mac-mini.local","msg":"Error of node method  newBrowser"}
+================= Original suppressed error =================
+browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/var/folders/8t/fp1n89vx7tx87tfb6qlf_7nm0000gn/T/playwright_chromiumdev_profile-Sr6ydZ --remote-debugging-pipe --no-startup-window
+<launched> pid=6674
+[pid=6674][err] dlopen /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework: dlopen(/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework, 0x0105): tried: '/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework' (no such file), '/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework' (no such file).
+Call log:
+[2m  - <launching> /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/var/folders/8t/fp1n89vx7tx87tfb6qlf_7nm0000gn/T/playwright_chromiumdev_profile-Sr6ydZ --remote-debugging-pipe --no-startup-window[22m
+[2m  - <launched> pid=6674[22m
+[2m  - [pid=6674][err] dlopen /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework: dlopen(/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework, 0x0105): tried: '/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework' (no such file), '/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework' (no such file).[22m
+[2m  - [pid=6674] <gracefully close start>[22m
+[2m  - [pid=6674] <kill>[22m
+[2m  - [pid=6674] <will force kill>[22m
+[2m  - [pid=6674] exception while trying to kill process: Error: kill EPERM[22m
+[2m  - [pid=6674] <process did exit: exitCode=null, signal=SIGABRT>[22m
+[2m  - [pid=6674] starting temporary directories cleanup[22m
+[2m  - [pid=6674] finished temporary directories cleanup[22m
+[2m  - [pid=6674] <gracefully close end>[22m
+
+    at _newBrowser (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/index.js:12418:54)
+    at newBrowser (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/index.js:12940:33)
+    at PlaywrightServer.newBrowser (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/index.js:13510:34)
+    at Object.onReceiveHalfClose (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+=============================================================
+{"level":30,"time":"2026-11-25T10:11:17.549Z","pid":6672,"hostname":"Shumus-Mac-mini.local","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/index.js:10979:11)
+    at takeScreenshot (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/index.js:11035:3)
+    at PlaywrightServer.takeScreenshot (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/index.js:13510:34)
+    at Object.onReceiveHalfClose (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:2147:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2026-11-25T10:11:17.549Z","pid":6672,"hostname":"Shumus-Mac-mini.local","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2026-11-25T10:11:17.559Z","pid":6672,"hostname":"Shumus-Mac-mini.local","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-11-25T10:11:17.559Z","pid":6672,"hostname":"Shumus-Mac-mini.local","msg":"End of node method closeAllBrowsers"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/index.js:13497:59)
+    at PlaywrightServer.setTimeout (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/index.js:13747:57)
+    at Object.onReceiveHalfClose (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:2147:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2026-11-25T10:11:17.562Z","pid":6672,"hostname":"Shumus-Mac-mini.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-11-25T10:11:17.562Z","pid":6672,"hostname":"Shumus-Mac-mini.local","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/index.js:13497:59)
+    at PlaywrightServer.setTimeout (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/index.js:13747:57)
+    at Object.onReceiveHalfClose (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:2147:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2026-11-25T10:11:17.564Z","pid":6672,"hostname":"Shumus-Mac-mini.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-11-25T10:11:17.564Z","pid":6672,"hostname":"Shumus-Mac-mini.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-11-25T10:11:17.574Z","pid":6672,"hostname":"Shumus-Mac-mini.local","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-11-25T10:11:17.574Z","pid":6672,"hostname":"Shumus-Mac-mini.local","msg":"End of node method closeAllBrowsers"}

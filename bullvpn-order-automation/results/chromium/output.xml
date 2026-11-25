@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5.1 (Python 3.9.6 on darwin)" generated="2026-11-25T17:11:16.211792" rpa="false" schemaversion="5">
+<suite id="s1" name="Order Payment" source="/Users/shumu/Documents/robot/bullvpn-order-automation/tests/order_payment.robot">
+<test id="s1-t1" name="Verify Best Seller 1 Year With Credit Card Payment" line="7">
+<kw name="Open BullVPN Order Page" owner="common.resource">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-11-25T17:11:16.284691" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/Users/shumu/Documents/robot/bullvpn-order-automation/results/chromium/browser/traces/temp/e43a72f4-6a0b-44aa-864b-070e0c071d3d"}</msg>
+<msg time="2026-11-25T17:11:16.298164" level="INFO">Starting Browser process /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/index.js using at 127.0.0.1:56397</msg>
+<msg time="2026-11-25T17:11:17.550351" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-11-25T17:11:17.550483" level="INFO">See also file:///Users/shumu/Documents/robot/bullvpn-order-automation/results/chromium/playwright-log.txt for additional details.</msg>
+<msg time="2026-11-25T17:11:17.550925" level="FAIL">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+&lt;launching&gt; /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/var/folders/8t/fp1n89vx7tx87tfb6qlf_7nm0000gn/T/playwright_chromiumdev_profile-Sr6ydZ --remote-debugging-pipe --no-startup-window
+&lt;launched&gt; pid=6674
+[pid=6674][err] dlopen /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework: dlopen(/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework, 0x0105): tried: '/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework' (no such file), '/Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework' (no such file).
+Call log:
+  - &lt;launching&gt; /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/var/folders/8t/fp1n89vx7tx87tfb6qlf_7nm0000gn/T/playwright_chromiumdev_profile-Sr6ydZ --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=6674
+  - [pid=6674][err] dlopen /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework: dlopen(/Users/shumu/Library/Python/3.9</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-11-25T17:11:16.284428" elapsed="1.271813">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+&lt;launching&gt; /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-l...
+    [ Message content over the limit has been removed. ]
+...h-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/var/folders/8t/fp1n89vx7tx87tfb6qlf_7nm0000gn/T/playwright_chromiumdev_profile-Sr6ydZ --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=6674
+  - [pid=6674][err] dlopen /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework: dlopen(/Users/shumu/Library/Python/3.9</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<arg>viewport={'width': 1366, 'height': 900}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-11-25T17:11:17.556599" elapsed="0.000067"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${ORDER_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-11-25T17:11:17.556780" elapsed="0.000040"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<arg>networkidle</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="NOT RUN" start="2026-11-25T17:11:17.556920" elapsed="0.000039"/>
+</kw>
+<status status="FAIL" start="2026-11-25T17:11:16.284076" elapsed="1.273008">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+&lt;launching&gt; /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-l...
+    [ Message content over the limit has been removed. ]
+...h-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/var/folders/8t/fp1n89vx7tx87tfb6qlf_7nm0000gn/T/playwright_chromiumdev_profile-Sr6ydZ --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=6674
+  - [pid=6674][err] dlopen /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework: dlopen(/Users/shumu/Library/Python/3.9</status>
+</kw>
+<kw name="Select Best Seller 1 Year Package" owner="OrderPage.resource">
+<status status="NOT RUN" start="2026-11-25T17:11:17.557304" elapsed="0.000052"/>
+</kw>
+<kw name="Select Credit Card Payment Method" owner="PaymentPage.resource">
+<status status="NOT RUN" start="2026-11-25T17:11:17.557486" elapsed="0.000039"/>
+</kw>
+<kw name="Verify Order Summary Matches Package" owner="OrderPage.resource">
+<arg>expected_plan=1 Year (365 + 5)</arg>
+<arg>expected_total=1,990 THB</arg>
+<arg>expected_discount=0</arg>
+<arg>expected_amount=1,990 THB</arg>
+<status status="NOT RUN" start="2026-11-25T17:11:17.557659" elapsed="0.000040"/>
+</kw>
+<kw name="Close All Browsers" owner="common.resource" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-11-25T17:11:17.560017" level="INFO">Closed all browsers</msg>
+<arg>ALL</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-25T17:11:17.558179" elapsed="0.001928"/>
+</kw>
+<status status="PASS" start="2026-11-25T17:11:17.557927" elapsed="0.002258"/>
+</kw>
+<doc>เข้าหน้า Order -&gt; เลือก Best Seller 1 Year -&gt; เลือก Credit Card -&gt; ตรวจ Summary[cite: 7]</doc>
+<status status="FAIL" start="2026-11-25T17:11:16.283584" elapsed="1.276668">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+&lt;launching&gt; /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-l...
+    [ Message content over the limit has been removed. ]
+...h-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/var/folders/8t/fp1n89vx7tx87tfb6qlf_7nm0000gn/T/playwright_chromiumdev_profile-Sr6ydZ --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=6674
+  - [pid=6674][err] dlopen /Users/shumu/Library/Python/3.9/lib/python/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1194/chrome-mac/Chromium.app/Contents/MacOS/../Frameworks/Chromium Framework.framework/Versions/141.0.7390.37/Chromium Framework: dlopen(/Users/shumu/Library/Python/3.9</status>
+</test>
+<status status="FAIL" start="2026-11-25T17:11:16.212661" elapsed="1.350402"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Order Payment" id="s1" pass="0" fail="1" skip="0">Order Payment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
